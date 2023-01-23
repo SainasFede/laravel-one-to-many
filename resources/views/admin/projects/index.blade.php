@@ -20,7 +20,7 @@
             @foreach ($projects as $project)
               <tr class="text-warning">
                 <th scope="row">{{$project->id}}</th>
-                <td>{{$project->name}}</td>
+                <td>{{$project->name}} {{$project->category->type}}</td>
                 <td>{{$project->client_name}}</td>
                 <td>{{$project->summary}}</td>
                 <td><img class="thumb" src="{{ $project->cover_image ? asset('storage/' . $project->cover_image) : 'https://img.freepik.com/free-vector/illustration-data-folder-icon_53876-6329.jpg?w=2000'}}" alt=""></td>
