@@ -18,8 +18,8 @@ class ProjectCategorySeeder extends Seeder
     {
         $projects = Project::all();
         foreach($projects as $project){
-            $type_id = Category::inRandomOrder()->first()->id;
-            $project->type_id = $type_id;
+            $category_id = Category::inRandomOrder()->first()->id;
+            $project->category_id = $category_id;
             $project->update();
         }
     }

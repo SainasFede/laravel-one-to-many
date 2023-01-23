@@ -68,6 +68,19 @@
             </div>
 
             <div class="mb-3">
+                <label for="date" class="form-label">Cateorie</label>
+                <select class="form-select" name="category_id" aria-label="Default select example">
+                    <option value="">Selezionare una categoria</option>
+                    @foreach ($categories as $category)
+                        <option
+                        @if($category->id == old('category_id')) selected @endif
+                         value="{{$category->id}}">{{$category->type}}</option>
+                    @endforeach
+                </select>
+
+            </div>
+
+            <div class="mb-3">
                 <label for="Nome Cliente" class="form-label"><strong>Nome Cliente</strong></label>
                 <input type="text"
                 name="client_name"
